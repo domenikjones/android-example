@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ch.netzbarkeit.reminder.app" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:name="ch.netzbarkeit.reminder.db.DtoFactory">
+
+        <!-- login activity -->
+        <activity
+            android:name="ch.netzbarkeit.reminder.app.LoginActivity"
+            android:label="@string/app_name" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- main activity -->
+        <activity
+            android:name="ch.netzbarkeit.reminder.app.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- tabbed activity -->
+        <activity
+            android:name="ch.netzbarkeit.reminder.app.TabbedActivity"
+            android:label="@string/app_name" >
+
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+
+        <activity
+            android:configChanges="keyboardHidden|orientation"
+            android:name=".AndroidTabAndListView"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- Inbox Activity -->
+        <activity android:name=".InboxActivity" />
+
+        <!-- Outbox Activity -->
+        <activity android:name=".OutboxActivity" />
+
+        <!-- Profile Activity -->
+        <activity android:name=".ProfileActivity" />
+
+
+        <meta-data android:name="DATABASE" android:value="reminder.db" />
+        <meta-data android:name="VERSION" android:value="1" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="ch.netzbarkeit.reminder" />
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

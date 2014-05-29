@@ -1,0 +1,41 @@
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/bg"
+    tools:context="ch.netzbarkeit.reminder.app.LoginActivity">
+
+    <TextView
+        android:id="@+id/textViewLogo"
+        android:layout_width="fill_parent"
+        android:layout_height="83dp"
+        android:text="NBK REMINDER"
+        android:typeface="sans"
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/textEditUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="52dp"
+        android:hint="Username"
+        />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="58dp"
+        android:inputType="textPassword"
+        android:id="@+id/textEditPassword"
+        android:hint="Password"
+        />
+
+    <Button
+        android:id="@+id/buttonLogin"
+        android:text="Login"
+        android:layout_height="81dp" />
+
+
+</TableLayout>
